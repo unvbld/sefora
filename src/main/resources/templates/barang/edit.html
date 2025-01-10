@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Edit Barang</title>
+</head>
+<body class="bg-gray-100">
+<div class="container mx-auto p-4">
+  <h1 class="text-2xl font-bold mb-4">Edit Barang</h1>
+  <form action="/barang/edit/{{barang.id}}" method="post" class="bg-white p-6 rounded-lg shadow-md">
+    <div class="mb-4">
+      <label for="namaBarang" class="block text-sm font-medium text-gray-700">Nama Barang:</label>
+      <input type="text" id="namaBarang" name="namaBarang" value="{{barang.namaBarang}}" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+    </div>
+
+    <div class="mb-4">
+      <label for="kategori" class="block text-sm font-medium text-gray-700">Kategori:</label>
+      <input type="text" id="kategori" name="kategori" value="{{barang.kategori}}" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+    </div>
+
+    <div class="mb-4">
+      <label for="stok" class="block text-sm font-medium text-gray-700">Stok:</label>
+      <input type="number" id="stok" name="stok" value="{{barang.stok}}" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+    </div>
+
+    <div class="mb-4">
+      <label for="harga" class="block text-sm font-medium text-gray-700">Harga:</label>
+      <input type="number" step="0.01" id="harga" name="harga" value="{{barang.harga}}" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500">
+    </div>
+
+    <div class="text-center">
+      <button type="submit" class="w-full px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Update Barang</button>
+    </div>
+  </form>
+</div>
+</body>
+</html>
